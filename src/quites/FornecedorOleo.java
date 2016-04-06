@@ -19,9 +19,9 @@ public class FornecedorOleo extends Fornecedor{
 
     @Override
     public void fornecer(String pedido) {
-       if("oleo sintetico".equals(pedido))
+       if("oleo mineral".equals(pedido))
         super.fornecer(pedido); //To change body of generated methods, choose Tools | Templates.
-       else if ("oleo mineral".equals(pedido)){
+       else if ("oleo sintetico".equals(pedido)){
            super.fornecer(pedido);}
        else if ("oleo semisintetico".equals(pedido)){
            super.fornecer(pedido);}

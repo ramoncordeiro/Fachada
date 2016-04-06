@@ -67,7 +67,7 @@ public void menu(int resposta){
         case 1: revisaocompleta();
           break;
         case 2: pinturaetrocarpneu();
-          System.out.println("Programa Rodando Menu Atendimento");
+          
         case 3: motorelavagem();
           break;
         case 4: lavagempintura();

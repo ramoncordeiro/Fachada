@@ -40,7 +40,6 @@ public class Main {
         atendimento.setCliente(clientes.get(i)); 
         clientes.get(i).resposta = Integer.parseInt(JOptionPane.showInputDialog("Qual serviço deseja ?\n 1 - Revisão completa.\n 2 - Pintura e Troca pneu.\n 3- Motor e lavagem.\n 4- Lavagem e Pintura.\n"));           
         atendimento.menu(clientes.get(i).resposta);     
-          System.out.println("Programa Rodando MAIN");
         atendimento.infoCarro();      
         JOptionPane.showMessageDialog(null, "Obrigado pela preferência!!!");
         }

@@ -20,28 +20,28 @@ public RevisaoMotor(){
 //REVISAR ESSA FUNÇÃO PARA INSERIR TIPO E RETORNO
 public void revisar(){
     JOptionPane.showMessageDialog(null,"O motor foi revisado com sucesso");
-    verificaEstoque();
+    
 }
 public void trocaOleo(){
     int oleo = Integer.parseInt(JOptionPane.showInputDialog("Qual Oleo deseja troca: 1-Mineral; 2-Sintetico; 3-SemiSintetico"));
     decrementaOleo(oleo);
-    verificaEstoque();
+    verificaEstoque(oleo);
     
 }
 
 
 
-public void verificaEstoque(){
+public void verificaEstoque(int oleo){
     
-    if(volOleoMineral<=30){
+    if(oleo==1){
         compras.comprasOleo();
         JOptionPane.showConfirmDialog(null, "Oleo Mineral está acabando. Foi solicitado ao setor de compras");
     }
-    else if(volOleoSintetico<=30){
+    else if(oleo==2){
         compras.comprasOleo();
         JOptionPane.showConfirmDialog(null, "Oleo sintetico está acabando. Foi solicitado ao setor de compras");
     }
-    else if(volOleoSemi<=30){
+    else if(oleo==3){
         compras.comprasOleo();
         JOptionPane.showConfirmDialog(null, "Oleo semisintetico está acabando. Foi solicitado ao setor de compras");
     }

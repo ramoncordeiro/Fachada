@@ -6,8 +6,8 @@ import javax.swing.JOptionPane;
 
 public class Compras {
 private static Compras instancia = new Compras();
-private static FornecedorPneus fornecePneus;
-private static FornecedorOleo forneceOleo;
+private static FornecedorPneus fornecePneus = new FornecedorPneus("Pneus Belém", 011010111);
+private static FornecedorOleo forneceOleo = new FornecedorOleo("Oleos Automotivos LTDA", 000001);
 private static FornecedorTintas forneceTinta = new FornecedorTintas("Tintas LTDA", 111000111);
    
 
@@ -55,15 +55,15 @@ public void comprasTinta(){
 }
 
 public void comprasOleo(){
-    int pedido = Integer.parseInt(JOptionPane.showInputDialog("Escolha o Tipo de Oleo que deseja solicitar: 1 - sintetico; 2 - mineral; 3- semisintetico"));
+    int pedido = Integer.parseInt(JOptionPane.showInputDialog("Escolha o Tipo de Oleo que deseja solicitar: 1 - mineral; 2 - sintetico; 3- semisintetico"));
     if(pedido==1){
-    forneceOleo.fornecer("Mineral");
+    forneceOleo.fornecer("oleo mineral");
     }
    else if(pedido==2){
-    forneceOleo.fornecer("Sintetico");
+    forneceOleo.fornecer("oleo sintetico");
         }
    else if(pedido==3){
-    forneceOleo.fornecer("semisintetico");
+    forneceOleo.fornecer("oleo semisintetico");
     }
 }
 
