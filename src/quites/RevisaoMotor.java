@@ -10,6 +10,9 @@ public class RevisaoMotor {
     int volOleoMineral = 100;
     int volOleoSintetico = 100;
     int volOleoSemi = 100;
+    
+    
+    
 public RevisaoMotor(){
  
 }   
@@ -29,6 +32,7 @@ public void trocaOleo(){
 
 
 public void verificaEstoque(){
+    
     if(volOleoMineral<=30){
         compras.comprasOleo();
         JOptionPane.showConfirmDialog(null, "Oleo Mineral está acabando. Foi solicitado ao setor de compras");
@@ -42,7 +46,7 @@ public void verificaEstoque(){
         JOptionPane.showConfirmDialog(null, "Oleo semisintetico está acabando. Foi solicitado ao setor de compras");
     }
 }
-
+//Decrementa do total de oleo disponpivel a partir da troca. 
 public void decrementaOleo(int oleo){
     if(oleo==1){ 
    volOleoMineral =-5;

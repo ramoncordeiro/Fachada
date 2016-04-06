@@ -8,7 +8,7 @@ public class Compras {
 private static Compras instancia = new Compras();
 private static FornecedorPneus fornecePneus;
 private static FornecedorOleo forneceOleo;
-private static FornecedorTintas forneceTinta;
+private static FornecedorTintas forneceTinta = new FornecedorTintas("Tintas LTDA", 111000111);
    
 
     public Compras() {
@@ -43,6 +43,7 @@ public void comprasPneu18(){
 public void comprasTinta(){
     int pedido = Integer.parseInt(JOptionPane.showInputDialog("Escolha a tinta que deseja solicitar: 1 - azul; 2 - amarelo; 3- vermelho"));
     if(pedido==1){
+        System.out.println("Compras comprarTinta() funcionando");   
     forneceTinta.fornecer("azul");
     }
    else if(pedido==2){
@@ -56,10 +57,10 @@ public void comprasTinta(){
 public void comprasOleo(){
     int pedido = Integer.parseInt(JOptionPane.showInputDialog("Escolha o Tipo de Oleo que deseja solicitar: 1 - sintetico; 2 - mineral; 3- semisintetico"));
     if(pedido==1){
-    forneceOleo.fornecer("sintetico");
+    forneceOleo.fornecer("Mineral");
     }
    else if(pedido==2){
-    forneceOleo.fornecer("mineral");
+    forneceOleo.fornecer("Sintetico");
         }
    else if(pedido==3){
     forneceOleo.fornecer("semisintetico");

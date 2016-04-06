@@ -24,17 +24,15 @@ public void pintar(){
     }else{
     JOptionPane.showMessageDialog(null,"O carro foi pintado com sucesso");
     decrementar(cor);
-    verificaEstoque();}
+    verificaEstoque(cor);}
 }
 
-public void verificaEstoque(){
+public void verificaEstoque(int cor){
     if(volazul<=30){
         compras.comprasTinta();
-        System.out.println("Ate verificaEstoque() de Pintura, Pós comprasTinta() Está funcionando");
         JOptionPane.showConfirmDialog(null, "A Tinta azul está acabando. Foi solicitado ao setor de compras");
     }
     else if(volAmarelo<=30){
-        System.out.println("Ate verificaEstoque2() de Pintura Está funcionando");
         compras.comprasTinta();
         JOptionPane.showConfirmDialog(null, "A tinta de cor amarelo está acabando. Foi solicitado ao setor de compras");
     }
@@ -51,7 +49,7 @@ public void decrementar(int cor){
     }else if(cor==2){
       volAmarelo =-10; 
     }
-    else {
+    else if(cor==3){
     volVermelho=-10;
     }
 }

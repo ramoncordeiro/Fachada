@@ -35,6 +35,7 @@ public static synchronized Atendimento getInstance(){
 
 public void revisaocompleta(){
     revisaomotor.revisar();
+    revisaomotor.trocaOleo();
     borracharia.calibragem();
     lavagem.lavar();
     pintura.pintar();
