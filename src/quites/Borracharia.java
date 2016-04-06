@@ -6,17 +6,35 @@ import javax.swing.JOptionPane;
 public class Borracharia {
      int qtdaro17 = 100;
     int qtdaro18 = 100;
-    FornecedorPneus fornecePneus;
+    FornecedorPneus fornecePneus = new FornecedorPneus("Bridgestone", 123456);
 public Borracharia(){
    
 }   
+
+    public int getQtdaro17() {
+        return qtdaro17;
+    }
+
+    public void setQtdaro17(int qtdaro17) {
+        this.qtdaro17 = qtdaro17;
+    }
+
+    public int getQtdaro18() {
+        return qtdaro18;
+    }
+
+    public void setQtdaro18(int qtdaro18) {
+        this.qtdaro18 = qtdaro18;
+    }
     
     
 
 public void trocarpneu(){
    int pneu = Integer.parseInt(JOptionPane.showInputDialog("Qual tipo de pneu (1 - aro 17, 2- aro18)"));
     decrementaPneu(pneu);
-   verificaEstoque();
+    System.out.println("Funcionando funcao decrementapneu() em trocapneu()");
+   verificaEstoquePneu();
+    System.out.println("Funcionando em trocapneu() depois da funcao verificaEstoque()");
 }
 public void remendopneu(){
     JOptionPane.showMessageDialog(null," Remendo do pneu realizado com sucesso");
@@ -27,8 +45,8 @@ public void calibragem(){
 }
 
 //talvez essa função fique na classe compra
-public void verificaEstoque(){
-    if(qtdaro17<=30){
+public void verificaEstoquePneu(){
+    if(getQtdaro17()<=30){
         fornecePneus.fornecer("aro17");
         JOptionPane.showConfirmDialog(null, "Quantidade baixa de pneus aro 17. Foi solicitado ao setor de compras");
     }

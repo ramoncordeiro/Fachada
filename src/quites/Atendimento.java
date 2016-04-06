@@ -44,6 +44,7 @@ public void revisaocompleta(){
 public void pinturaetrocarpneu(){
     //pintura.pintar();
     borracharia.trocarpneu();
+    pintura.pintar();
 }
 
 public void motorelavagem(){
@@ -65,7 +66,7 @@ public void menu(int resposta){
         case 1: revisaocompleta();
           break;
         case 2: pinturaetrocarpneu();
-          break;
+          System.out.println("Programa Rodando Menu Atendimento");
         case 3: motorelavagem();
           break;
         case 4: lavagempintura();
@@ -73,6 +74,7 @@ public void menu(int resposta){
         default: System.out.println("Opção Errada, o programa será fechado");
          
     }
+    System.out.println("Programa Rodando Menu Atendimento");
 }
 
     public static void setCliente(Cliente cliente) {

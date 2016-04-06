@@ -5,7 +5,7 @@ import javax.swing.JOptionPane;
 
 
 public class RevisaoMotor {
-    Compras compras; 
+    Compras compras = Compras.getInstance();
     
     int volOleoMineral = 100;
     int volOleoSintetico = 100;
